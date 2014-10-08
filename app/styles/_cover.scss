@@ -89,6 +89,9 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    small {
+        color: #fff;
+    }
 }
 
 .masthead-nav > {
@@ -154,4 +157,5 @@ body {
     /* IE8 proofing */
     color: rgba(255, 255, 255, 0.5);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
 }
