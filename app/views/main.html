@@ -1,0 +1,18 @@
+<div>
+	<div class="loading ng-show" ng-hide="stations">
+		<i class="fa fa-spinner fa-spin fa-3x"></i>
+	</div>
+	<div ng-show="stations">
+		<div class="ng-hide" ng-hide="userLocation">
+			<p><i class="fa fa-globe fa-3x"></i></p>
+			<p>Please share your location with this app in order to find Dublin Bike stations near you.</p>
+		</div>
+		<h6>{{userLocation ? "Nearest 10 Stations" : "All Stations"}}</h6>
+		<ul class="list-group text-left">
+			<div class="list-group-item" ng:repeat="station in stations | orderBy:predicate | limitTo:quantity" ng-class="{'list-group-item-success': station.free_bikes > 0, 'list-group-item-danger': station.free_bikes == 0}">
+				<h5 class="list-group-item-heading">{{station.name}} <small class="pull-right" ng-show="station.distance">{{station.distance | geoDistance}}</small></h5>
+				<p class="list-group-item-text"><span class="label" ng-class="{'label-success': station.free_bikes > 0, 'label-danger': station.free_bikes == 0}">{{station.free_bikes}} free bikes</span> <span class="label" ng-class="{'label-success': station.empty_slots > 0, 'label-danger': station.empty_slots == 0}">{{station.empty_slots}} slots available</span></p>
+			</div>
+		</ul>
+	</div>
+</div>
