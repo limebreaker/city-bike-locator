@@ -3,7 +3,7 @@
 describe('Filter: geoDistance', function () {
 
   // load the filter's module
-  beforeEach(module('dublinBikesApp'));
+  beforeEach(module('cityBikeLocatorApp'));
 
   // initialize a new instance of the filter before each test
   var geoDistance;

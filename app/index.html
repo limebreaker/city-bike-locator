@@ -15,7 +15,7 @@
     <!-- endbuild -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
-  <body ng-app="dublinBikesApp">
+  <body ng-app="cityBikeLocatorApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -33,6 +33,7 @@
               <ul class="nav masthead-nav">
                 <li ng-class="{ active: isActive('/')}"><a ng-href="#/">Stations</a></li>
                 <!-- <li ng-class="{ active: isActive('/favourites')}"><a ng-href="#/favourites">Favourites</a></li> -->
+                <li ng-class="{ active: isActive('/settings')}"><a ng-href="#/settings">Settings</a></li>
                 <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about">About</a></li>
               </ul>
             </div>
@@ -43,7 +44,7 @@
           </div>
 
           <div class="mastfoot">
-            <div class="inner">
+            <div class="inner text-center">
               <p>Created by <a href="http://danielstuart.ie/" target="_blank">Dan Stuart</a> | <a href="https://github.com/danbhala/city-bike-locator" target="_blank"><i class="fa fa-github"></i> GitHub Project</a> </p>
             </div>
           </div>
@@ -95,6 +96,10 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angularjs-geolocation/src/geolocation.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="bower_components/angular-timeago/src/timeAgo.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -105,6 +110,9 @@
         <script src="scripts/controllers/headercontroller.js"></script>
         <script src="scripts/controllers/favourites.js"></script>
         <script src="scripts/filters/geo-distance.js"></script>
+        <script src="scripts/controllers/settings.js"></script>
+        <script src="scripts/controllers/station.js"></script>
+        <script src="scripts/filters/getstationbyid.js"></script>
         <!-- endbuild -->
 </body>
 </html>

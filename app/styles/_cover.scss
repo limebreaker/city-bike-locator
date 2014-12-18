@@ -42,7 +42,7 @@ body {
     min-height: 100%;
     background-color: transparent;
     color: #fff;
-    text-align: center;
+    
     //text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
@@ -83,6 +83,7 @@ body {
 .masthead {
     margin-top: 15px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .masthead-brand {

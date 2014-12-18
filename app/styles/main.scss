@@ -1,4 +1,8 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+$brand-primary: #428BCA;
+$gold: #ffd700;
+
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -7,4 +11,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 .loading {
 	padding: 80px 0;
+}
+
+.station {
+	.rating {
+		color: $gold;
+	}
+	.angular-google-map-container { 
+		height: 400px;
+	}
 }

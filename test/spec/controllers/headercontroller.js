@@ -3,7 +3,7 @@
 describe('Controller: HeadercontrollerCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('dublinBikesApp'));
+  beforeEach(module('cityBikeLocatorApp'));
 
   var HeadercontrollerCtrl,
     scope;

@@ -1,0 +1,30 @@
+<div class="station">
+ <ul class="list-group">
+ 	<li class="list-group-item list-group-item-primary active">
+ 		<h3 class="list-group-item-heading">
+ 			{{station.name}}
+ 			<span class="rating glyphicon pull-right" ng-class="{true:'glyphicon-star', false:'glyphicon-star-empty'}[station.favourite]" ng-click="toggleFavourite(station.id)"></span>
+ 		</h3>
+ 		<p class="list-group-item-text">
+ 			<em>Last update {{station.timestamp | timeAgo}}</em>
+ 		</p>
+ 	</li>
+    <li class="list-group-item" ng-class="{'list-group-item-success': station.free_bikes > 0, 'list-group-item-danger': station.free_bikes == 0}">Free Bikes <span class="badge">{{station.free_bikes}}</span></li>
+    <li class="list-group-item" ng-class="{'list-group-item-success': station.empty_slots > 0, 'list-group-item-danger': station.empty_slots == 0}">Slots Available <span class="badge">{{station.empty_slots}}</span></li>
+    
+    <li class="list-group-item list-group-item-info" ng-show="station.distance">Distance <span class="badge">{{station.distance | geoDistance}}</span></li>
+ </ul>
+
+ <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+ 	<ui-gmap-marker coords="marker.coords" options="marker.options" idkey="marker.id">
+ 		<ui-gmap-window show="true" options="marker.windowOptions">
+ 			<div style="width: 175px; margin: 0px;">
+				<h4 style="color: #000; margin: 0px;">{{marker.name}}</h4>
+ 			</div>
+		</ui-gmap-window>
+    </ui-gmap-marker>
+ </ui-gmap-google-map>
+
+
+
+</div> 

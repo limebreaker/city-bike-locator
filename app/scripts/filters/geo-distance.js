@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc filter
- * @name dublinBikesApp.filter:geoDistance
+ * @name cityBikeLocatorApp.filter:geoDistance
  * @function
  * @description
  * # geoDistance
- * Filter in the dublinBikesApp.
+ * Filter in the cityBikeLocatorApp.
  */
-angular.module('dublinBikesApp')
+angular.module('cityBikeLocatorApp')
   .filter('geoDistance', function () {
     return function (input) {
       if (input >= 1000) {

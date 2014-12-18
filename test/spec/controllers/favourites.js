@@ -3,7 +3,7 @@
 describe('Controller: FavouritesCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('dublinBikesApp'));
+  beforeEach(module('cityBikeLocatorApp'));
 
   var FavouritesCtrl,
     scope;

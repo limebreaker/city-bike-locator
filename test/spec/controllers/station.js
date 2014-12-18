@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: AboutCtrl', function () {
+describe('Controller: StationCtrl', function () {
 
   // load the controller's module
   beforeEach(module('cityBikeLocatorApp'));
 
-  var AboutCtrl,
+  var StationCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    AboutCtrl = $controller('AboutCtrl', {
+    StationCtrl = $controller('StationCtrl', {
       $scope: scope
     });
   }));

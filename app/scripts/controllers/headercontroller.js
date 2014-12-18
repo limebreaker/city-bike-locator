@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name dublinBikesApp.controller:HeadercontrollerCtrl
+ * @name cityBikeLocatorApp.controller:HeadercontrollerCtrl
  * @description
  * # HeadercontrollerCtrl
- * Controller of the dublinBikesApp
+ * Controller of the cityBikeLocatorApp
  */
-angular.module('dublinBikesApp')
+angular.module('cityBikeLocatorApp')
   .controller('HeadercontrollerCtrl', function ($scope, $location) {
     $scope.isActive = function (viewLocation) {
         return viewLocation === $location.path();

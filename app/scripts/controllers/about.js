@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name dublinBikesApp.controller:AboutCtrl
+ * @name cityBikeLocatorApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the dublinBikesApp
+ * Controller of the cityBikeLocatorApp
  */
-angular.module('dublinBikesApp')
+angular.module('cityBikeLocatorApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

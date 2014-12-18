@@ -3,7 +3,7 @@
 describe('Service: geolocation', function () {
 
   // load the service's module
-  beforeEach(module('dublinBikesApp'));
+  beforeEach(module('cityBikeLocatorApp'));
 
   // instantiate service
   var geolocation;

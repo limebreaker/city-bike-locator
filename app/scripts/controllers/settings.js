@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name cityBikeLocatorApp.controller:FavouritesCtrl
+ * @name cityBikeLocatorApp.controller:SettingsCtrl
  * @description
- * # FavouritesCtrl
+ * # SettingsCtrl
  * Controller of the cityBikeLocatorApp
  */
 angular.module('cityBikeLocatorApp')
-  .controller('FavouritesCtrl', function ($scope) {
+  .controller('SettingsCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

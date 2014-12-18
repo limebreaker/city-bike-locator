@@ -2,18 +2,27 @@
 
 /**
  * @ngdoc function
- * @name dublinBikesApp.controller:MainCtrl
+ * @name cityBikeLocatorApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the dublinBikesApp
+ * Controller of the cityBikeLocatorApp
  */
-angular.module('dublinBikesApp')
-  .controller('MainCtrl', function ($scope, $http, geolocation) {
+angular.module('cityBikeLocatorApp')
+  .controller('MainCtrl', function ($scope, $http, geolocation, localStorageService) {
     $scope.url = 'http://api.citybik.es/v2/networks/dublinbikes';
     $scope.stations = false;
     $scope.userLocation = false;
     $scope.predicate = 'name';
+    $scope.toggleFavourite = '';
     $scope.quantity = 0;
+    
+    localStorageService.set('stations');
+    $scope.unbind = localStorageService.bind($scope, 'stations');
+    
+    $scope.unbind = localStorageService.bind($scope, 'favouriteStations');
+    if (!$scope.favouriteStations) {
+        $scope.favouriteStations = [];
+    }
 
     geolocation.getLocation().then(function(data){
         $scope.userLocation = {latitude:data.coords.latitude, longitude:data.coords.longitude};
@@ -32,11 +41,23 @@ angular.module('dublinBikesApp')
             $scope.quantity = $scope.stations.length;
             $scope.predicate = 'name';
         }
+        checkFavourite();
     });
 
     function calculateDistances() {
         angular.forEach($scope.stations, function(station, key) {
             $scope.stations[key].distance = distance(station.latitude, station.longitude, $scope.userLocation.latitude, $scope.userLocation.longitude);
+        });
+    }
+
+
+    function checkFavourite() {
+        angular.forEach($scope.stations, function(station, key) {
+            if ($scope.favouriteStations.indexOf(station.id) === -1) {
+                $scope.stations[key].favourite = false;
+            } else {
+                $scope.stations[key].favourite = true;
+            }
         });
     }
 
