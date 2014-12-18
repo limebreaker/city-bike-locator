@@ -15,3 +15,18 @@ AngularJS-Geolocation
 This app is currently work in progress and addition features will be added over time.
 
 Safe and happy cycling!
+
+
+
+Changelog
+
+18 December 2014:
+* renamed angular app to city-bike-locator
+* station page with info and google map
+* ability to save a station to your favourites
+* ability to list favourite stations
+* put in placeholder settings page
+
+09 October 2014:
+* Uploaded project to github
+
